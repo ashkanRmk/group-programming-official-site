@@ -1,0 +1,48 @@
+<!-- Just For Test! I make it great soon ... -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.2.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.2.0/css/jquery.terminal.min.css"
+        rel="stylesheet" />
+    <title>Group Programming</title>
+</head>
+
+<body>
+    <div id="terminal"></div>
+    <script>
+    $(function () {
+        $('#terminal').terminal({
+            help: function () {
+                var text = "\n[[;white;]Commands:\n\n[[b;white;]about]: for see where is here !\n"
+                +"[[b;white;]project_list]: for list all projects + related links + realted members\n"
+                +"[[b;white;]member_list]: for list all programmer and software engineer contributing in this big project]\n";
+                this.echo(text);
+            },
+            about: function() {
+                var text = "[[;white;]The goal of this project is to create a large archive of various projects"+
+                "to help developers to learn. Also, a lot of educational content is produced at the side of the work.]";
+                this.echo(text);
+            },
+            project_list: function() {
+                var text = "[[;white;]1- realtime S.O.S messenger]"
+                this.echo(text);
+            },
+            member_list: function() {
+                var text = "[[[;white;]Under Construction ...]"
+                this.echo(text);
+            }
+        },{
+            greetings: 'Welcome to Group Programming Site! Type \'help\' to see more detail\n',
+            name: 'Group Programming',
+            height: 500,
+            prompt: '[[b;green;]you@group-programming:~$] ',
+        });
+    });
+    </script>
+
+</body>
+
+</html>
